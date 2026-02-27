@@ -113,7 +113,7 @@ fun CarteirinhaDigitalSenai(
 
             // 5) QR Code
             QrCode(
-                conteudo = "24247632"
+                conteudo = "90000000001382264860"
             )
         }
     }
