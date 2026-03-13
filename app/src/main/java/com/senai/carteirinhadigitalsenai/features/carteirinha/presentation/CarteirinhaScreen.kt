@@ -1,4 +1,4 @@
-package com.senai.carteirinhadigitalsenai
+package com.senai.carteirinhadigitalsenai.features.carteirinha.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -14,9 +14,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.senai.carteirinhadigitalsenai.ui.theme.CarteirinhaDigitalSenaiTheme
+import com.senai.carteirinhadigitalsenai.app.Header
+import com.senai.carteirinhadigitalsenai.app.Perfil
+import com.senai.carteirinhadigitalsenai.app.Turma
+import com.senai.carteirinhadigitalsenai.features.carteirinha.presentation.component.LabelText
+import com.senai.carteirinhadigitalsenai.features.carteirinha.presentation.component.QrCode
+import com.senai.carteirinhadigitalsenai.features.carteirinha.presentation.component.ValueText
 
 @Composable
 fun CarteirinhaView(modifier: Modifier = Modifier) {

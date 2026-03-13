@@ -1,4 +1,4 @@
-package com.senai.carteirinhadigitalsenai
+package com.senai.carteirinhadigitalsenai.app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -19,22 +19,25 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.senai.carteirinhadigitalsenai.ui.theme.CarteirinhaDigitalSenaiTheme
+import com.senai.carteirinhadigitalsenai.features.carteirinha.presentation.CarteirinhaView
+import com.senai.carteirinhadigitalsenai.R
+import com.senai.carteirinhadigitalsenai.core.designsystem.theme.CarteirinhaDigitalSenaiTheme
 
 class MainActivity : ComponentActivity() {
+    @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             CarteirinhaDigitalSenaiTheme {
-                Main()
+                Carteirinha()
             }
         }
     }
 }
 
 @Composable
-fun Main() {
+fun Carteirinha() {
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
             painter = painterResource(id = R.drawable.background),
@@ -43,18 +46,15 @@ fun Main() {
             modifier = Modifier.fillMaxSize()
         )
 
-        Scaffold(containerColor = Color.Transparent) { innerPadding ->
-            Box(
-                modifier = Modifier
-                    .padding(innerPadding)
-                    .fillMaxSize(),
-                contentAlignment = Alignment.Center
-            ) {
-                CarteirinhaView()
-            }
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
+        ) {
+            CarteirinhaView()
         }
     }
 }
+
 
 @Composable
 fun Header() {
@@ -104,18 +104,24 @@ fun Turma(turma: String) {
     }
 }
 
-@Preview(showBackground = true)
+@Preview(
+    showBackground = true,
+    showSystemUi = true
+)
 @Composable
 fun CarteirinhaPreviewClaro() {
     CarteirinhaDigitalSenaiTheme (darkTheme = false) {
-        Main()
+        Carteirinha()
     }
 }
 
-@Preview(showBackground = true)
+@Preview(
+    showBackground = true,
+    showSystemUi = true
+)
 @Composable
 fun CarteirinhaPreviewEscuro() {
     CarteirinhaDigitalSenaiTheme (darkTheme = true) {
-        Main()
+        Carteirinha()
     }
 }

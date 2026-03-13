@@ -1,4 +1,4 @@
-package com.senai.carteirinhadigitalsenai
+package com.senai.carteirinhadigitalsenai.features.carteirinha.presentation.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable

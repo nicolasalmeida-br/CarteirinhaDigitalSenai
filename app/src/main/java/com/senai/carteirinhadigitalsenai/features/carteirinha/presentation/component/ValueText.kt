@@ -1,4 +1,4 @@
-package com.senai.carteirinhadigitalsenai
+package com.senai.carteirinhadigitalsenai.features.carteirinha.presentation.component
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
@@ -20,9 +20,12 @@ fun ValueText(
         text = value,
         fontSize = fontSize,
         fontWeight = fontWeight,
+        fontFamily = MaterialTheme.typography.bodyMedium.fontFamily,
+        lineHeight = MaterialTheme.typography.bodyMedium.lineHeight,
         modifier = modifier
             .padding(top = 4.dp)
             .padding(start = 8.dp),
+        softWrap = true,
         color = MaterialTheme.colorScheme.onSurface,
         style = MaterialTheme.typography.bodyMedium
     )
