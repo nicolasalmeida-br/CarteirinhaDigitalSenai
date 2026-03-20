@@ -1,4 +1,4 @@
-package com.senai.carteirinhadigitalsenai.features.carteirinha.presentation.component
+package com.senai.carteirinhadigitalsenai.features.carteirinha.presentation.components
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme

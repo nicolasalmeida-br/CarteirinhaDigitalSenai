@@ -1,16 +1,17 @@
 package com.senai.carteirinhadigitalsenai.app
 
 import androidx.compose.runtime.Composable
-import com.senai.carteirinhadigitalsenai.core.designsystem.theme.CarteirinhaDigitalSenaiTheme
-import com.senai.carteirinhadigitalsenai.core.navigation.AppNavHost
+import androidx.navigation.compose.rememberNavController
+import com.senai.carteirinhadigitalsenai.core.designsystem.themes.CarteirinhaDigitalSenaiTheme
+import com.senai.carteirinhadigitalsenai.core.designsystem.navigation.AppNavHost
 
 @Composable
 fun App() {
-    CarteirinhaDigitalSenaiTheme {
-        val navController = rememberAppNavController()
+    CarteirinhaDigitalSenaiTheme() {
+        val navController = rememberNavController()
 
         AppNavHost(
-            navController = navController
+            navController = navController,
         )
     }
 }
