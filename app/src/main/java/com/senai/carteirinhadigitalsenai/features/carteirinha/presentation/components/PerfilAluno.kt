@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -44,8 +45,8 @@ fun PerfilAluno(modifier: Modifier = Modifier) {
             modifier = Modifier.fillMaxWidth(),
         )
         InfoAluno(
-            labelText = "Curso",
-            valueText = "Técnico em Desenvolvimento de Sistemas",
+            labelText = stringResource(R.string.curso),
+            valueText = stringResource(R.string.curso_aluno),
             fontWeight = FontWeight.Normal,
             fontSize = 20.sp,
             modifier = Modifier.fillMaxWidth(),

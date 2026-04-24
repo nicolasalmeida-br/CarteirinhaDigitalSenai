@@ -31,6 +31,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -84,13 +85,13 @@ fun HomeContent(
                     IconButton(onClick = onVoltar) {
                         Icon(
                             imageVector = Icons.Filled.ArrowBack,
-                            contentDescription = "Voltar",
+                            contentDescription = stringResource(R.string.button_voltar),
                             tint = Color.Black
                         )
                     }
 
                     Text(
-                        text = "Home",
+                        text = stringResource(R.string.home),
                         style = MaterialTheme.typography.titleMedium,
                         color = Color.Black,
                         fontWeight = FontWeight.Bold
@@ -119,7 +120,7 @@ fun HomeContent(
                     ) {
                         Image(
                             painter = painterResource(id = R.drawable.logo),
-                            contentDescription = "Logo SENAI",
+                            contentDescription = stringResource(R.string.logo_senai),
                             modifier = Modifier
                                 .height(64.dp)
                                 .clip(RoundedCornerShape(12.dp)),
@@ -129,7 +130,7 @@ fun HomeContent(
                         Spacer(modifier = Modifier.height(24.dp))
 
                         Text(
-                            text = "Carteirinha Digital SENAI",
+                            text = stringResource(R.string.titulo_carteirinha),
                             style = MaterialTheme.typography.headlineSmall,
                             fontWeight = FontWeight.Bold,
                             color = Color(0xFF111111),
@@ -139,7 +140,7 @@ fun HomeContent(
                         Spacer(modifier = Modifier.height(12.dp))
 
                         Text(
-                            text = "Acesse sua carteirinha estudantil digital de forma rápida e prática.",
+                            text = stringResource(R.string.acessar_carteirinha),
                             style = MaterialTheme.typography.bodyLarge,
                             color = Color(0xFF444444),
                             textAlign = TextAlign.Center
@@ -157,7 +158,7 @@ fun HomeContent(
                             )
                         ) {
                             Text(
-                                text = "Ver carteirinha",
+                                text = stringResource(R.string.ver_carteirinha),
                                 style = MaterialTheme.typography.titleMedium
                             )
                         }

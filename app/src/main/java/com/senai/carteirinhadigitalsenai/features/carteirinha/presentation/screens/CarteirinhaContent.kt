@@ -33,6 +33,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -123,7 +124,7 @@ fun CarteirinhaContent(
                     ) {
                         Image(
                             painter = painterResource(id = R.drawable.logo),
-                            contentDescription = "Logo SENAI",
+                            contentDescription = stringResource(R.string.logo_senai),
                             modifier = Modifier
                                 .height(50.dp)
                                 .padding(bottom = 16.dp),
@@ -146,7 +147,7 @@ fun CarteirinhaContent(
                         ) {
                             Image(
                                 painter = painterResource(id = R.drawable.perfil),
-                                contentDescription = "Foto de perfil",
+                                contentDescription = stringResource(R.string.perfil),
                                 modifier = Modifier
                                     .fillMaxSize()
                                     .clip(CircleShape),
@@ -157,7 +158,7 @@ fun CarteirinhaContent(
                         Spacer(modifier = Modifier.height(20.dp))
 
                         InfoAluno(
-                            labelText = "Nome",
+                            labelText = stringResource(R.string.nome),
                             valueText = nomeAluno,
                             mostrarLabel = false,
                             centralizado = true,
@@ -169,7 +170,7 @@ fun CarteirinhaContent(
                         Spacer(modifier = Modifier.height(5.dp))
 
                         InfoAluno(
-                            labelText = "Curso",
+                            labelText = stringResource(R.string.curso),
                             valueText = curso,
                             mostrarLabel = false,
                             centralizado = true,
@@ -181,8 +182,8 @@ fun CarteirinhaContent(
                         Spacer(modifier = Modifier.height(5.dp))
 
                         InfoAluno(
-                            labelText = "Turma",
-                            valueText = "Turma: $turma",
+                            labelText = stringResource(R.string.turma),
+                            valueText = stringResource(R.string.turma, turma),
                             mostrarLabel = false,
                             centralizado = true,
                             fontWeight = FontWeight.Normal,
@@ -215,10 +216,10 @@ fun CarteirinhaContent(
 fun PreviewCarteirinhaClaro() {
     CarteirinhaDigitalSenaiTheme(darkTheme = false) {
         CarteirinhaContent(
-            nomeAluno = "Nicolas Luis Moura de Almeida",
-            curso = "Técnico em Desenvolvimento de Sistemas",
-            turma = "4DEVM-A",
-            qrCodeContent = "90000000001382264860",
+            nomeAluno = stringResource(R.string.nome_aluno),
+            curso = stringResource(R.string.curso_aluno),
+            turma = stringResource(R.string.turma_aluno),
+            qrCodeContent = stringResource(R.string.qrcode_aluno),
             modifier = Modifier
                 .padding(16.dp)
                 .fillMaxSize(),
@@ -232,10 +233,10 @@ fun PreviewCarteirinhaClaro() {
 fun PreviewCarteirinhaEscuro() {
     CarteirinhaDigitalSenaiTheme(darkTheme = true) {
         CarteirinhaContent(
-            nomeAluno = "Nicolas Luis Moura de Almeida",
-            curso = "Técnico em Desenvolvimento de Sistemas",
-            turma = "4DEVM-A",
-            qrCodeContent = "90000000001382264860",
+            nomeAluno = stringResource(R.string.nome_aluno),
+            curso = stringResource(R.string.curso_aluno),
+            turma = stringResource(R.string.turma_aluno),
+            qrCodeContent = stringResource(R.string.qrcode_aluno),
             modifier = Modifier
                 .padding(16.dp)
                 .fillMaxSize(),

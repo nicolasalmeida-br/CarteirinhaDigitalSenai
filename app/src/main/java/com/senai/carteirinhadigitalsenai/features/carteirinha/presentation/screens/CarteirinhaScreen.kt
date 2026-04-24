@@ -2,7 +2,9 @@ package com.senai.carteirinhadigitalsenai.features.carteirinha.presentation.scre
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavHostController
+import com.senai.carteirinhadigitalsenai.R
 
 @Composable
 fun CarteirinhaScreen(
@@ -10,10 +12,10 @@ fun CarteirinhaScreen(
     navController: NavHostController
 ) {
     CarteirinhaContent(
-        nomeAluno = "Nicolas Luis Moura de Almeida",
-        curso = "Técnico em Desenvolvimento de Sistemas",
-        turma = "4DEVM-A",
-        qrCodeContent = "90000000001382264860",
+        nomeAluno = stringResource(R.string.nome_aluno),
+        curso = stringResource(R.string.curso_aluno),
+        turma = stringResource(R.string.turma_aluno),
+        qrCodeContent = stringResource(R.string.qrcode_aluno),
         modifier = modifier,
         onVoltar = {
             navController.popBackStack()

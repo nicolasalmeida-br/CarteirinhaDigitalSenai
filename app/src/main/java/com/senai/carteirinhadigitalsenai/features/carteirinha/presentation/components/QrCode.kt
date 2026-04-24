@@ -9,10 +9,12 @@ import androidx.core.graphics.createBitmap
 
 import android.graphics.Bitmap
 import android.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.EncodeHintType
 import com.google.zxing.qrcode.QRCodeWriter
+import com.senai.carteirinhadigitalsenai.R
 
 @Composable
 fun QrCode(
@@ -23,7 +25,7 @@ fun QrCode(
 
     Image(
         bitmap = bitmap.asImageBitmap(),
-        contentDescription = "QR Code",
+        contentDescription = stringResource(R.string.qr_code),
         modifier = modifier
     )
 }
@@ -62,5 +64,5 @@ fun gerarQrCode(
 @Preview(showBackground = true)
 @Composable
 fun QrCodePreviewClaro() {
-    QrCode("90000000001382264860")
+    QrCode(stringResource(R.string.qrcode_aluno))
 }

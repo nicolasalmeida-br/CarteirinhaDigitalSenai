@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">CarteirinhaDigitalSenai</string>
+    <string name="login">Login</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="curso">Curso</string>
+    <string name="titulo_curso">Técnico em Desenvolvimento de Sistemas</string>
+    <string name="logo_senai">Logo SENAI</string>
+    <string name="perfil">Foto de perfil</string>
+    <string name="curso_aluno">Técnico em Desenvolvimento de Sistemas</string>
+    <string name="turma_aluno">4DEVM-A</string>
+    <string name="qrcode_aluno">90000000001382264860</string>
+    <string name="nome_aluno">Nicolas Luis Moura de Almeida</string>
+    <string name="qr_code">QR Code</string>
+    <string name="titulo_carteirinha">Carteirinha Digital SENAI</string>
+    <string name="acessar_carteirinha">Acesse sua carteirinha estudantil digital de forma rápida e prática.</string>
+    <string name="ver_carteirinha">Ver carteirinha</string>
+    <string name="button_voltar">Voltar</string>
+    <string name="home">Home</string>
+    <string name="turma">Turma: %1$s</string>
+    <string name="nome">Nome</string>
 </resources>
