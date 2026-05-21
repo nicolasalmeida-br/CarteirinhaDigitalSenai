@@ -3,5 +3,5 @@ package com.senai.carteirinhadigitalsenai.features.unidadecurricular.data.reposi
 import com.senai.carteirinhadigitalsenai.features.unidadecurricular.domain.model.UnidadeCurricular
 
 interface UnidadeCurricularRepository {
-    suspend fun buscarUnidadesCurriculares(): List<UnidadeCurricular>
+    suspend fun buscarUnidadesCurriculares(): Result<List<UnidadeCurricular>>
 }
